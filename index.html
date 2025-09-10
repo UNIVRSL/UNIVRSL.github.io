@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2023 NEC Code Book Learning Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>2023 NEC Code Book Learning Game</h1>
+            <p>Master the National Electrical Code book layout and organization</p>
+        </header>
+
+        <div id="main-menu" class="screen active">
+            <h2>Choose Your Game Mode</h2>
+            <div class="game-modes">
+                <button class="mode-btn" data-mode="chapters">Chapter Organization</button>
+                <button class="mode-btn" data-mode="articles">Article Numbers & Topics</button>
+                <button class="mode-btn" data-mode="sections">Section Numbering</button>
+                <button class="mode-btn" data-mode="tables">Tables & Figures</button>
+                <button class="mode-btn" data-mode="definitions">Definitions & Terms</button>
+                <button class="mode-btn" data-mode="appendix">Appendix Content</button>
+                <button class="mode-btn" data-mode="equations">Electrical Equations</button>
+            </div>
+
+        </div>
+
+        <div id="game-screen" class="screen">
+            <div class="game-header">
+                <h2 id="mode-title"></h2>
+                <div class="game-info">
+                    <span id="question-counter">Question 1 of 10</span>
+                    <span id="score">Score: 0/0</span>
+                    <span id="timer">Time: 0s</span>
+                </div>
+            </div>
+
+            <div class="question-container">
+                <h3 id="question-text"></h3>
+                <div id="question-options" class="options"></div>
+                <div id="feedback" class="feedback hidden"></div>
+            </div>
+
+            <div class="game-controls">
+                <button id="next-btn" class="hidden">Next Question</button>
+                <button id="back-to-menu" class="secondary-btn">Back to Menu</button>
+            </div>
+        </div>
+
+        <div id="results-screen" class="screen">
+            <h2>Game Complete!</h2>
+            <div id="final-results"></div>
+            <div class="results-actions">
+                <button id="play-again">Play Again</button>
+                <button id="back-to-menu-results" class="secondary-btn">Back to Menu</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="game-data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
